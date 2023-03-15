@@ -6,35 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Div Builder</title>
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
     <script defer src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="builder-result"></div>
-        <div class="builder-panel"></div>
+        <div class="builder-panel">
+            <i class="fa-regular fa-trash-can fa-pos-clr"></i>
+            <i class="fa-solid fa-shuffle fa-pos-rand"></i>
+            <i class="fa-regular fa-sun fa-pos-theme"></i><!--fa-moon-->
+            <div class="bp-column-center">
+                <h1>Admin Panel</h1>
+            </div>
+            <div class="bp-column-center">
+                <h2>Size & Style</h2>
+            </div>
+            <div class="bp-row">
+                <div class="bp-column">
+                    <label for="height-option">Height:</label>
+                    <div class="bp-row-center">
+                        <input type="text" id="height-option" placeholder="200">
+                        <select class="size-type">
+                            <option value="px">PX</option>
+                            <option value="pc">PC</option>
+                            <option value="em">EM</option>
+                            <option value="rem">REM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bp-column">
+                    <label for="width-option">Width:</label>
+                    <div class="bp-row-center">
+                        <input type="text" id="width-option" placeholder="200">
+                        <select class="size-type">
+                            <option value="px">PX</option>
+                            <option value="pc">PC</option>
+                            <option value="em">EM</option>
+                            <option value="rem">REM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="bp-column">
+                    <label for="bg-color-option">Background-color:</label>
+                    <div class="bp-row-center">
+                        <input type="color" id="bg-color-option" value="#8b00ff">
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </div>
     </div>
+    fa-regular fa-sun
+    <select name="" id="">
+        <option value="13">SQWQWQWQWQ</option>
+        <option value="13">sqewewqewqewq</option>
+        <option value="13">1Sqqwewqewqewq</option>
+        <option value="13">12</option>
+        <option value="13">12</option>
+        <option value="13">12</option>
+    </select>
     <br><br>
-    <button type="file">123</button>
     <input type="text">
     <br><br>
-    <input type="password">
-    <br><br>
-    <input type="radio">
-    <br><br>
-    <input type="checkbox">
-    <br><br>
-    <input type="button">
+    <button type="button">123</button>
     <br><br>
     <input type="color">
     <br><br>
-    <input type="email">
-    <br><br>
-    <input onclick="pik()" id="pika" type="file">
-    <br><br>
-    <input type="hidden">
-    <br><br>
-    <input type="image">
+    <input type="file">
     <br><br>
     <input type="number">
     <br><br>
