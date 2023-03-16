@@ -22,11 +22,11 @@ body {
     background-color: var(--builder-result-bg-color);
 }
 
+/*BEGIN - INPUT STYLE*/
+
 select,
 input[type="text"],
 input[type="number"] {
-    height: 30px;
-    width: 90px;
     background-color: var(--input-bg-color);
     font-family: "Poppins";
     font-size: 14px;
@@ -35,18 +35,6 @@ input[type="number"] {
     outline: none;
     caret-color: var(--based-color);
     color: var(--input-txt-color);
-    padding: 0px 15px;
-}
-
-input[type=number],
-input[type=number]::-moz-outer-spin-button {
-    appearance: textfield;
-}
-
-.size-type {
-    width: 64px !important;
-    padding: 0px 6px !important;
-    margin-left: 6px;
 }
 
 input[type="text"]:hover,
@@ -69,7 +57,7 @@ input[type="file"] {
     padding: 12px;
 }
 
-input[type="color"]{
+input[type="color"] {
     background-color: var(--input-bg-color);
     border: none;
     border-radius: 5px;
@@ -78,22 +66,7 @@ input[type="color"]{
     cursor: pointer;
 }
 
-
-/* button[type="button"] {
-
-} */
-
-
-
-
-
-
-
-
-
-
-
-
+/*ENDED - INPUT STYLE*/
 
 .container {
     height: 100%;
@@ -109,7 +82,7 @@ label {
     font-size: 12px;
     font-weight: 300;
     text-transform: uppercase;
-    text-indent: 6px;
+    text-indent: 3px;
     user-select: none;
     color: var(--input-txt-color);
 }
@@ -134,7 +107,7 @@ h2 {
     width: 100%;
     font-family: "Poppins";
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 300;
     text-align: center;
     text-transform: uppercase;
     border-bottom: 2px solid var(--based-color);
@@ -145,14 +118,14 @@ h2 {
 
 .builder-result {
     height: 100%;
-    width: 60%;
+    width: 100%;
     background-color: var(--builder-result-bg-color);
 }
 
 .builder-panel {
     position: relative;
     height: 100%;
-    width: 40%;
+    width: auto;
     background-color: var(--builder-panel-bg-color);
     padding: 12px;
 }
@@ -196,11 +169,37 @@ h2 {
     opacity: 1;
 }
 
+.select-size-type{
+    height: 30px !important;
+    width: 64px !important;
+    margin: 0px 6px !important;
+    padding: 0px 6px !important;
+}
+
+.select-text-type{
+    height: 30px !important;
+    width: 120px !important;
+    padding: 0px 6px !important;
+}
+
+.text-input-size{
+    height: 30px !important;
+    width: 110px !important;
+	padding: 0px 15px !important;
+}
+
+.number-input-size{
+    height: 30px !important;
+    width: 80px !important;
+	padding: 0px 15px !important;
+}
+
 .bp-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: flex-start;
+    margin-bottom: 6px;
 }
 
 .bp-row-center {
@@ -215,6 +214,7 @@ h2 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-right: 16px;
 }
 
 .bp-column-center {

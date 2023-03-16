@@ -16,19 +16,17 @@
         <div class="builder-panel">
             <i class="fa-regular fa-trash-can fa-pos-clr"></i>
             <i class="fa-solid fa-shuffle fa-pos-rand"></i>
-            <i class="fa-regular fa-sun fa-pos-theme"></i><!--fa-moon-->
+            <i class="fa-regular fa-sun fa-pos-theme"></i>
             <div class="bp-column-center">
                 <h1>Admin Panel</h1>
-            </div>
-            <div class="bp-column-center">
                 <h2>Size & Style</h2>
             </div>
             <div class="bp-row">
                 <div class="bp-column">
-                    <label for="height-option">Height:</label>
-                    <div class="bp-row-center">
-                        <input type="text" id="height-option" placeholder="200">
-                        <select class="size-type">
+                    <label for="height-input-option">Height:</label>
+                    <div class="bp-row">
+                        <input type="text" class="text-input-size" id="height-input-option" placeholder="200">
+                        <select class="select-size-type" id="height-select-option">
                             <option value="px">PX</option>
                             <option value="pc">PC</option>
                             <option value="em">EM</option>
@@ -38,9 +36,9 @@
                 </div>
                 <div class="bp-column">
                     <label for="width-option">Width:</label>
-                    <div class="bp-row-center">
-                        <input type="text" id="width-option" placeholder="200">
-                        <select class="size-type">
+                    <div class="bp-row">
+                        <input type="text" class="text-input-size" id="width-option" placeholder="200">
+                        <select class="select-size-type" id="width-select-option">
                             <option value="px">PX</option>
                             <option value="pc">PC</option>
                             <option value="em">EM</option>
@@ -48,44 +46,93 @@
                         </select>
                     </div>
                 </div>
+                <div class="bp-column">
+                    <label for="text-option">Text:</label>
+                    <div class="bp-row">
+                        <input type="text" class="text-input-size" id="text-option" placeholder="Example">
+                    </div>
+                </div>
+            </div>
+
+            <!--EDITEDABLE ZONE-->
+            <!--EDITEDABLE ZONE-->
+
+            <div class="bp-row">
 
                 <div class="bp-column">
-                    <label for="bg-color-option">Background-color:</label>
-                    <div class="bp-row-center">
-                        <input type="color" id="bg-color-option" value="#8b00ff">
+                    <label for="bg-color-option">Bg-color:</label>
+                    <div class="bp-row">
+                        <input type="color" id="border-color-option" value="#FF2052">
                     </div>
                 </div>
 
+                <div class="bp-column">
+                    <label for="bg-color-option">text-color:</label>
+                    <div class="bp-row">
+                        <input type="color" id="border-color-option" value="#FF2052">
+                    </div>
+                </div>
 
+                <div class="bp-column">
+                    <label for="border-color-option">Border-color:</label>
+                    <div class="bp-row">
+                        <input type="color" id="border-color-option" value="#FF2052">
+                    </div>
+                </div>
 
             </div>
 
 
 
+            <!--EDITEDABLE ZONE-->
+            <!--EDITEDABLE ZONE-->
 
+
+            <div class="bp-row">
+                <div class="bp-column">
+                    <label for="border-width-option">Border-width:</label>
+                    <div class="bp-row">
+                        <input type="number" class="number-input-size" id="border-width-option" min="0" placeholder="5">
+                        <select disabled class="select-size-type" id="border-width-select-option">
+                            <option value="px">PX</option>
+                            <option value="pc">PC</option>
+                            <option value="em">EM</option>
+                            <option value="rem">REM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bp-column">
+                    <label for="border-style-select-option">Border-style:</label>
+                    <div class="bp-row">
+                        <select class="select-text-type" id="border-style-select-option">
+                            <option value="dotted">Dotted</option>
+                            <option value="dashed">Dashed</option>
+                            <option value="solid">Solid</option>
+                            <option value="double">Double</option>
+                            <option value="groove">Groove</option>
+                            <option value="ridge">Ridge</option>
+                            <option value="inset">Inset</option>
+                            <option value="outset">Outset</option>
+                            <option value="none">None</option>
+                            <option value="hidden">Hidden</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bp-column">
+                    <label for="border-width-option">rad-width:</label>
+                    <div class="bp-row">
+                        <input type="number" class="number-input-size" id="border-width-option" min="0" placeholder="5">
+                    </div>
+                </div>
+            </div>
+
+            <!--EDITEDABLE ZONE-->
+            <!--EDITEDABLE ZONE-->
+            <!--EDITEDABLE ZONE-->
+            <!--EDITEDABLE ZONE-->
+
+            
         </div>
     </div>
-    fa-regular fa-sun
-    <select name="" id="">
-        <option value="13">SQWQWQWQWQ</option>
-        <option value="13">sqewewqewqewq</option>
-        <option value="13">1Sqqwewqewqewq</option>
-        <option value="13">12</option>
-        <option value="13">12</option>
-        <option value="13">12</option>
-    </select>
-    <br><br>
-    <input type="text">
-    <br><br>
-    <button type="button">123</button>
-    <br><br>
-    <input type="color">
-    <br><br>
-    <input type="file">
-    <br><br>
-    <input type="number">
-    <br><br>
-    <input type="range">
-    <br><br>
 </body>
 </html>
