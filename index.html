@@ -12,8 +12,11 @@
 </head>
 <body>
     <div class="container">
-        <div class="builder-result"></div>
+        <div class="builder-result">
+
+        </div>
         <div class="builder-panel">
+            <i class="fa-solid fa-chevron-right fa-pos-chevron" onclick="visibilitySidebar()"></i>
             <i class="fa-regular fa-trash-can fa-pos-clr"></i>
             <i class="fa-solid fa-shuffle fa-pos-rand"></i>
             <i class="fa-regular fa-sun fa-pos-theme"></i>
@@ -55,6 +58,27 @@
             </div>
             <div class="bp-row-center">
                 <div class="bp-column">
+                    <label for="gradient-one-option">Gradient 1:</label>
+                    <div class="bp-row">
+                        <input type="color" id="gradient-one-option" value="#20B2AA">
+                    </div>
+                </div>
+                <div class="bp-column">
+                    <label for="gradient-two-option">Gradient 2:</label>
+                    <div class="bp-row">
+                        <input type="color" id="gradient-two-option" value="#F07427">
+                    </div>
+                </div>
+                <div class="bp-column">
+                    <label for="gradient-degree-option">Degree °:</label>
+                    <div class="bp-row">
+                        <input type="number" class="number-input-size" id="gradient-degree-option" min="0" placeholder="45">
+                    </div>
+                </div>
+                <div class="bp-column">
+                    <div class="vertical-separator"></div>
+                </div>
+                <div class="bp-column">
                     <label for="bg-color-option">Bg color:</label>
                     <div class="bp-row">
                         <input type="color" id="bg-color-option" value="#FF2052">
@@ -67,18 +91,9 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
             <div class="bp-column-center">
-                <h2>Border & Style</h2>
+                <h2>Border & Font</h2>
             </div>
-
-
-
-
             <div class="bp-row">
                 <div class="bp-column">
                     <label for="border-width-option">Border width:</label>
@@ -116,13 +131,44 @@
                     </div>
                 </div>
             </div>
-
             <div class="bp-row">
                 <div class="bp-column">
-                    <label for="border-width-option">Border Radius:</label>
+                    <label for="border-radius-option">Border Radius:</label>
                     <div class="bp-row">
-                        <input type="number" class="number-input-size" id="border-width-option" min="0" placeholder="5">
-                        <select class="select-size-type" id="border-width-select-option">
+                        <input type="number" class="number-input-size" id="border-radius-option" min="0" placeholder="5">
+                        <select class="select-size-type" id="border-radius-select-option">
+                            <option value="px">PX</option>
+                            <option value="pc">PC</option>
+                            <option value="em">EM</option>
+                            <option value="rem">REM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bp-column">
+                    <div class="vertical-separator"></div>
+                </div>
+                <div class="bp-column">
+                    <label for="font-family-option">Font family:</label>
+                    <div class="bp-row">
+                        <select class="select-text-type" id="font-family-select-option">
+                            <option value="Poppins">Poppins</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Tahoma">Tahoma</option>
+                            <option value="Trebuchet MS">Trebuchet MS</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Garamond">Garamond</option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="Brush Script MT">Brush Script MT</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bp-column">
+                    <label for="font-size-option">Font size:</label>
+                    <div class="bp-row">
+                        <input type="number" class="number-input-size" id="font-size-option" min="0" placeholder="16">
+                        <select class="select-size-type" id="font-size-select-option">
                             <option value="px">PX</option>
                             <option value="pc">PC</option>
                             <option value="em">EM</option>
@@ -131,50 +177,40 @@
                     </div>
                 </div>
             </div>
-
-            <!--EDITEDABLE ZONE-->
-            <!--EDITEDABLE ZONE-->
-            <!--EDITEDABLE ZONE-->
-            <!--EDITEDABLE ZONE-->
-
             <div class="bp-column-center">
-                <h2>DISPLAY FLEX & FLEX CHARACTERS</h2>
+                <h2>Transform & Opacity</h2>
             </div>
 
+
+
+
             <div class="bp-row">
+
+
+
+
                 <div class="bp-column">
-                    <label for="border-width-option">1Border-width:</label>
-                    <div class="bp-row">
-                        <input type="number" class="number-input-size" id="border-width-option" min="0" placeholder="5">
-                        <select disabled class="select-size-type" id="border-width-select-option">
-                            <option value="px">PX</option>
-                            <option value="pc">PC</option>
-                            <option value="em">EM</option>
-                            <option value="rem">REM</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="bp-column">
-                    <label for="border-style-select-option">Border-style:</label>
+                    <label for="border-style-select-option">Transform type:</label>
                     <div class="bp-row">
                         <select class="select-text-type" id="border-style-select-option">
-                            <option value="dotted">Dotted</option>
+                            <option value="rotate">Rotate</option>
                             <option value="dashed">Dashed</option>
-                            <option value="solid">Solid</option>
-                            <option value="double">Double</option>
-                            <option value="groove">Groove</option>
-                            <option value="ridge">Ridge</option>
-                            <option value="inset">Inset</option>
-                            <option value="outset">Outset</option>
-                            <option value="none">None</option>
-                            <option value="hidden">Hidden</option>
                         </select>
                     </div>
                 </div>
+
+                
                 <div class="bp-column">
                     <label for="border-width-option">rad-width:</label>
                     <div class="bp-row">
                         <input type="number" class="number-input-size" id="border-width-option" min="0" placeholder="5">
+                    </div>
+                </div>
+
+                <div class="bp-column">
+                    <label for="opacity-option" id="opacity-label-option">Opacity (1):</label>
+                    <div class="bp-row">
+                        <input type="range" id="opacity-option" min="0" max="1" value="1" step="0.01" onmousemove="document.getElementById('opacity-label-option').innerHTML = `Opacity (${this.value}):`;">
                     </div>
                 </div>
             </div>
