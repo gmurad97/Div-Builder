@@ -20,8 +20,6 @@ body {
     background-color: var(--builder-result-bg-color);
 }
 
-/*BEGIN - INPUT STYLE*/
-
 select,
 input[type="text"],
 input[type="number"] {
@@ -48,15 +46,16 @@ input[type="range"] {
     transition: accent-color 0.3s linear;
 }
 
-/* input[type="file"] {
+input[type="file"] {
     background-color: var(--input-bg-color);
     font-family: "Poppins";
     font-size: 14px;
+    width: 100%;
     border-radius: 5px;
     color: var(--based-color);
     padding: 12px;
     transition: accent-color 0.3s linear;
-} */
+}
 
 input[type="color"] {
     background-color: var(--input-bg-color);
@@ -68,7 +67,51 @@ input[type="color"] {
     transition: background-color 0.3s linear;
 }
 
-/*ENDED - INPUT STYLE*/
+button[type="button"] {
+    position: relative;
+    background-color: var(--based-color);
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: var(--input-txt-color);
+    padding: 10px 30px;
+    cursor: pointer;
+    z-index: 0;
+}
+
+button[type="button"]::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--based-color);
+    border-radius: 5px;
+    transform: scale(1);
+    opacity: 1;
+    z-index: -1;
+}
+
+button[type="button"]:hover::before {
+    animation: pulseBtn 1s linear infinite;
+}
+
+@keyframes pulseBtn {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
 
 .container {
     position: relative;
@@ -124,7 +167,7 @@ h2 {
     transition: color 0.3s linear;
 }
 
-.vertical-separator{
+.vertical-separator {
     height: 48px;
     width: 2px;
     background-color: var(--based-color);
@@ -150,7 +193,7 @@ h2 {
     transition: right 0.3s linear, visibility 0.3s linear, background-color 0.3s linear;
 }
 
-.fa-pos-menu{
+.fa-pos-menu {
     height: 32px;
     width: 32px;
     display: flex;
@@ -164,7 +207,7 @@ h2 {
     cursor: pointer;
 }
 
-.fa-pos-menu:hover{
+.fa-pos-menu:hover {
     color: var(--input-txt-color);
 }
 
@@ -207,26 +250,26 @@ h2 {
     opacity: 1;
 }
 
-.select-size-type{
+.select-size-type {
     height: 30px !important;
     width: 64px !important;
     margin: 0px 6px !important;
     padding: 0px 6px !important;
 }
 
-.select-text-type{
+.select-text-type {
     height: 30px !important;
     width: 120px !important;
     padding: 0px 6px !important;
 }
 
-.text-input-size{
+.text-input-size {
     height: 30px !important;
     width: 110px !important;
-	padding: 0px 15px !important;
+    padding: 0px 15px !important;
 }
 
-.number-input-size{
+.number-input-size {
     height: 30px !important;
     width: 80px !important;
     padding: 0px 5px 0px 15px !important;
