@@ -7,18 +7,61 @@
     <title>Div Builder</title>
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+    <script defer src="js/theme-script.js"></script>
     <script defer src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="builder-result">
-            <i class="fa-solid fa-xmark fa-pos-menu"></i>
+            <div class="br-row">
+                <div class="br-column">
+                    <i class="fa-solid fa-bars fa-pos-menu" onclick="visiblitySidebar();"></i>
+                    <p>Menu</p>
+                </div>
+                <div class="br-column">
+                    <i class="fa-regular fa-sun fa-pos-theme" onclick="darkMode();"></i>
+                    <p>Theme</p>
+                </div>
+                <div class="vertical-separator-head"></div>
+                <div class="br-column">
+                    <label for="justify-content-option">Justify-Content:</label>
+                    <div class="bp-row">
+                        <select class="select-text-type" id="justify-content-option" onchange="document.getElementsByClassName('br-canvas')[0].style.justifyContent = this.value">
+                            <option value="center">Center</option>
+                            <option value="flex-start">Flex-Start</option>
+                            <option value="flex-end">Flex-End</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="br-column">
+                    <label for="align-items-option">Align-Items:</label>
+                    <div class="bp-row">
+                        <select class="select-text-type" id="align-items-option" onchange="document.getElementsByClassName('br-canvas')[0].style.alignItems = this.value">
+                            <option value="center">Center</option>
+                            <option value="flex-start">Flex-Start</option>
+                            <option value="flex-end">Flex-End</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="br-column">
+                    <div class="bp-row">
+                        <button type="button" onclick="resetPosition();">Position reset</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="br-canvas">
+                <i class="fa-solid fa-chevron-up fa-pos-canvas-up" onclick="topIncrementPosition();"></i>
+                <i class="fa-solid fa-chevron-right fa-pos-canvas-right" onclick="rightIncrementPosition();"></i>
+                <i class="fa-solid fa-chevron-down fa-pos-canvas-down" onclick="bottomIncrementPosition();"></i>
+                <i class="fa-solid fa-chevron-left fa-pos-canvas-left" onclick="leftIncrementPosition();"></i>
+                <div id="block-builder-id" class="block-builder"></div>
+            </div>
         </div>
         <div class="builder-panel">
             <i class="fa-regular fa-trash-can fa-pos-clr"></i>
             <i class="fa-solid fa-shuffle fa-pos-rand"></i>
-            <i class="fa-regular fa-sun fa-pos-theme"></i>
             <div class="bp-column-center">
                 <h1>Admin Panel</h1>
                 <h2>Size & Color & Text</h2>
