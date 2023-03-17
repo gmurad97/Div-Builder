@@ -33,6 +33,7 @@ input[type="number"] {
     outline: none;
     caret-color: var(--based-color);
     color: var(--input-txt-color);
+    transition: background-color 0.3s linear, caret-color 0.3s linear, color 0.3s linear;
 }
 
 input[type="text"]:hover,
@@ -44,16 +45,18 @@ input[type="number"]:focus {
 
 input[type="range"] {
     accent-color: var(--based-color);
+    transition: accent-color 0.3s linear;
 }
 
-input[type="file"] {
+/* input[type="file"] {
     background-color: var(--input-bg-color);
     font-family: "Poppins";
     font-size: 14px;
     border-radius: 5px;
     color: var(--based-color);
     padding: 12px;
-}
+    transition: accent-color 0.3s linear;
+} */
 
 input[type="color"] {
     background-color: var(--input-bg-color);
@@ -62,6 +65,7 @@ input[type="color"] {
     outline: none;
     padding: 0px 10px;
     cursor: pointer;
+    transition: background-color 0.3s linear;
 }
 
 /*ENDED - INPUT STYLE*/
@@ -81,11 +85,12 @@ input[type="color"] {
 label {
     font-family: "Poppins";
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 500;
     text-transform: uppercase;
     text-indent: 3px;
     user-select: none;
     color: var(--input-txt-color);
+    transition: color 0.3s linear;
 }
 
 h1 {
@@ -101,6 +106,7 @@ h1 {
     user-select: none;
     color: var(--based-color);
     margin-bottom: 12px;
+    transition: color 0.3s linear;
 }
 
 h2 {
@@ -108,25 +114,28 @@ h2 {
     width: 100%;
     font-family: "Poppins";
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
     text-transform: uppercase;
     border-bottom: 2px solid var(--based-color);
     user-select: none;
     color: var(--based-color);
     margin: 12px 0px;
+    transition: color 0.3s linear;
 }
 
 .vertical-separator{
     height: 48px;
     width: 2px;
     background-color: var(--based-color);
+    transition: background-color 0.3s linear;
 }
 
 .builder-result {
     height: 100%;
     width: 100%;
     background-color: var(--builder-result-bg-color);
+    transition: background-color 0.3s linear;
 }
 
 .builder-panel {
@@ -137,13 +146,11 @@ h2 {
     width: auto;
     background-color: var(--builder-panel-bg-color);
     padding: 12px;
-    transition: right 0.32s linear;
+    visibility: visible;
+    transition: right 0.3s linear, visibility 0.3s linear, background-color 0.3s linear;
 }
 
-.fa-pos-chevron{
-    position: absolute;
-    top: 54px;
-    left: -16px;
+.fa-pos-menu{
     height: 32px;
     width: 32px;
     display: flex;
@@ -157,7 +164,7 @@ h2 {
     cursor: pointer;
 }
 
-.fa-pos-chevron:hover{
+.fa-pos-menu:hover{
     color: var(--input-txt-color);
 }
 
@@ -222,7 +229,7 @@ h2 {
 .number-input-size{
     height: 30px !important;
     width: 80px !important;
-	padding: 0px 15px !important;
+    padding: 0px 5px 0px 15px !important;
 }
 
 .bp-row {

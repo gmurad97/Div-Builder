@@ -13,13 +13,13 @@
 <body>
     <div class="container">
         <div class="builder-result">
-
+            <i class="fa-solid fa-xmark fa-pos-menu" onclick="visibilitySidebar();"></i>
+            
         </div>
         <div class="builder-panel">
-            <i class="fa-solid fa-chevron-right fa-pos-chevron" onclick="visibilitySidebar()"></i>
             <i class="fa-regular fa-trash-can fa-pos-clr"></i>
             <i class="fa-solid fa-shuffle fa-pos-rand"></i>
-            <i class="fa-regular fa-sun fa-pos-theme"></i>
+            <i class="fa-regular fa-sun fa-pos-theme" onclick="darkMode();"></i>
             <div class="bp-column-center">
                 <h1>Admin Panel</h1>
                 <h2>Size & Color & Text</h2>
@@ -28,7 +28,7 @@
                 <div class="bp-column">
                     <label for="height-input-option">Height:</label>
                     <div class="bp-row">
-                        <input type="number" class="text-input-size" id="height-input-option" min="0" placeholder="200">
+                        <input type="number" class="number-input-size" id="height-input-option" min="0" placeholder="200">
                         <select class="select-size-type" id="height-select-option">
                             <option value="px">PX</option>
                             <option value="pc">PC</option>
@@ -40,7 +40,7 @@
                 <div class="bp-column">
                     <label for="width-option">Width:</label>
                     <div class="bp-row">
-                        <input type="number" class="text-input-size" id="width-option" min="0" placeholder="200">
+                        <input type="number" class="number-input-size" id="width-option" min="0" placeholder="200">
                         <select class="select-size-type" id="width-select-option">
                             <option value="px">PX</option>
                             <option value="pc">PC</option>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bp-row-center">
+            <div class="bp-row">
                 <div class="bp-column">
                     <label for="gradient-one-option">Gradient 1:</label>
                     <div class="bp-row">
@@ -72,7 +72,7 @@
                 <div class="bp-column">
                     <label for="gradient-degree-option">Degree °:</label>
                     <div class="bp-row">
-                        <input type="number" class="number-input-size" id="gradient-degree-option" min="0" placeholder="45">
+                        <input type="number" class="number-input-size" id="gradient-degree-option" placeholder="45">
                     </div>
                 </div>
                 <div class="bp-column">
@@ -180,41 +180,28 @@
             <div class="bp-column-center">
                 <h2>Transform & Opacity</h2>
             </div>
-
-
-
-
             <div class="bp-row">
-
-
-
-
                 <div class="bp-column">
-                    <label for="border-style-select-option">Transform type:</label>
+                    <label for="tranform-option">Transform type:</label>
                     <div class="bp-row">
-                        <select class="select-text-type" id="border-style-select-option">
+                        <select disabled class="select-text-type" id="tranform-select-option">
                             <option value="rotate">Rotate</option>
-                            <option value="dashed">Dashed</option>
                         </select>
                     </div>
                 </div>
-
-                
                 <div class="bp-column">
-                    <label for="border-width-option">rad-width:</label>
+                    <label for="rotate-degree-option">Degree °:</label>
                     <div class="bp-row">
-                        <input type="number" class="number-input-size" id="border-width-option" min="0" placeholder="5">
+                        <input type="number" class="number-input-size" id="rotate-degree-option" placeholder="45">
                     </div>
                 </div>
-
                 <div class="bp-column">
                     <label for="opacity-option" id="opacity-label-option">Opacity (1):</label>
                     <div class="bp-row">
-                        <input type="range" id="opacity-option" min="0" max="1" value="1" step="0.01" onmousemove="document.getElementById('opacity-label-option').innerHTML = `Opacity (${this.value}):`;">
+                        <input type="range" id="opacity-option" min="0" max="1" value="1" step="0.01" onchange="document.getElementById('opacity-label-option').innerHTML = `Opacity (${this.value}):`;" onmousemove="document.getElementById('opacity-label-option').innerHTML = `Opacity (${this.value}):`;">
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 </body>
