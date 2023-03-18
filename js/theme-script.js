@@ -28,13 +28,13 @@ function visiblitySidebar() {
         visibleSidebar = false;
         builderPanelElement.style.right = "0px";
         builderPanelElement.style.visibility = "visible";
-        fontAwesomeMenuElement.classList.replace("fa-bars","fa-xmark");
+        fontAwesomeMenuElement.classList.replace("fa-bars", "fa-xmark");
     }
     else {
         visibleSidebar = true;
         builderPanelElement.style.right = "-768px";
         builderPanelElement.style.visibility = "hidden";
-        fontAwesomeMenuElement.classList.replace("fa-xmark","fa-bars");
+        fontAwesomeMenuElement.classList.replace("fa-xmark", "fa-bars");
     }
 }
 
