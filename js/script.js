@@ -2,6 +2,19 @@
 
 let blockBuilder = document.getElementById("block-builder-id");
 
+function getRndNum(min, max) {
+    return Math.round(min - 0.5 + Math.random() * (max - min + 1));
+}
+
+function randomizeStyle() {
+    document.getElementById("height-input-option").value = getRndNum(32, 384);
+    document.getElementById("width-option").value = getRndNum(32, 384);
+    document.getElementById("text-option").value = "GMurad97";
+    document.getElementById("border-width-option").value = getRndNum(0, 10);
+    document.getElementById("border-radius-option").value = getRndNum(0, 128);
+    document.getElementById("font-size-option").value = "18";
+}
+
 function resetStyle() {
     document.getElementById("height-input-option").value = "";
     document.getElementById("width-option").value = "";
