@@ -435,6 +435,6 @@ p {
 .vertical-separator-head {
     height: 48px;
     width: 2px;
-    background-color: black;
+    background-color: var(--based-color);
     transition: background-color 0.3s linear;
 }
