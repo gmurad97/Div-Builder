@@ -1,6 +1,6 @@
 "use strict";
 
-let visibleSidebar = false;
+let visibleSidebar = true;
 let enabledDarkMode = true;
 
 let rootClassListElement = document.querySelector(":root");
