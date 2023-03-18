@@ -7,26 +7,31 @@ function generateBuilder(){
 }
 
 
+
+/*BEGIN - POSITION CHANGE BUILDER RESULT*/
+
 function resetPosition(){
     blockBuilder.style.top = "0px";
     blockBuilder.style.right = "0px";
-    blockBuilder.style.bottom = "0px";
-    blockBuilder.style.left = "0px";
 }
 
-function topIncrementPosition(){
-    console.log(blockBuilder.style.getPropertyValue("top"));
-
+function topPos(){
+    let topValue = parseInt(getComputedStyle(blockBuilder).top.toString().replace("px","")) - 10;
+    blockBuilder.style.top = topValue + "px";
 }
 
-function rightIncrementPosition(){
-    console.log(blockBuilder.offsetTop);
+function rightPos(){
+    let rightValue = parseInt(getComputedStyle(blockBuilder).right.toString().replace("px","")) - 10;
+    blockBuilder.style.right = rightValue + "px";
+}
+function bottomPos(){
+    let bottomValue = parseInt(getComputedStyle(blockBuilder).top.toString().replace("px","")) + 10;
+    blockBuilder.style.top = bottomValue + "px";
 }
 
-function bottomIncrementPosition(){
-    blockBuilder.style.bottom += 1;
+function leftPos(){
+    let leftValue = parseInt(getComputedStyle(blockBuilder).right.toString().replace("px","")) + 10;
+    blockBuilder.style.right = leftValue + "px";
 }
 
-function leftIncrementPosition(){
-    blockBuilder.style.left += 1;
-}
+/*ENDED - POSITION CHANGE BUILDER RESULT*/

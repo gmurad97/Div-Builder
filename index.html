@@ -49,13 +49,16 @@
                         <button type="button" onclick="resetPosition();">Position reset</button>
                     </div>
                 </div>
-
             </div>
             <div class="br-canvas">
-                <i class="fa-solid fa-chevron-up fa-pos-canvas-up" onclick="topIncrementPosition();"></i>
-                <i class="fa-solid fa-chevron-right fa-pos-canvas-right" onclick="rightIncrementPosition();"></i>
-                <i class="fa-solid fa-chevron-down fa-pos-canvas-down" onclick="bottomIncrementPosition();"></i>
-                <i class="fa-solid fa-chevron-left fa-pos-canvas-left" onclick="leftIncrementPosition();"></i>
+                <i class="fa-solid fa-chevron-up fa-pos-canvas-up" onclick="topPos();"></i>
+                <i class="fa-solid fa-chevron-right fa-pos-canvas-right" onclick="rightPos();"></i>
+                <i class="fa-solid fa-chevron-down fa-pos-canvas-down" onclick="bottomPos();"></i>
+                <i class="fa-solid fa-chevron-left fa-pos-canvas-left" onclick="leftPos();"></i>
+                <i class="fa-solid fa-chevron-up fa-pos-canvas-topleft" onclick="topPos();leftPos();"></i>
+                <i class="fa-solid fa-chevron-up fa-pos-canvas-topright" onclick="topPos();rightPos();"></i>
+                <i class="fa-solid fa-chevron-down fa-pos-canvas-bottomleft" onclick="bottomPos();leftPos();"></i>
+                <i class="fa-solid fa-chevron-down fa-pos-canvas-bottomright" onclick="bottomPos();rightPos();"></i>
                 <div id="block-builder-id" class="block-builder"></div>
             </div>
         </div>
